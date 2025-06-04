@@ -1,8 +1,8 @@
 # iB-theme
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
-[![Version](https://img.shields.io/badge/version-1.0.0-green.svg)](https://github.com/username/iB-theme/releases)
-[![Validate Theme](https://github.com/username/iB-theme/workflows/Validate%20Theme/badge.svg)](https://github.com/username/iB-theme/actions)
+[![Version](https://img.shields.io/badge/version-1.0.0-green.svg)](https://github.com/JohnThre/iB-theme/releases)
+[![Validate Theme](https://github.com/JohnThre/iB-theme/workflows/Validate%20Theme/badge.svg)](https://github.com/JohnThre/iB-theme/actions)
 
 > IBM-inspired code editor theme for Cursor IDE, GNU Emacs and VIM.
 
@@ -37,7 +37,7 @@ code --install-extension ib-theme.ib-theme
 1. **Download the latest release**:
    ```bash
    # Clone the repository
-   git clone https://github.com/username/iB-theme.git
+   git clone https://github.com/JohnThre/iB-theme.git
    cd iB-theme
    ```
 
@@ -118,7 +118,7 @@ The theme provides optimized syntax highlighting for:
 
 ```bash
 # Clone the repository
-git clone https://github.com/username/iB-theme.git
+git clone https://github.com/JohnThre/iB-theme.git
 cd iB-theme
 
 # Install VS Code Extension Manager
@@ -179,10 +179,10 @@ GitHub: [@JohnThre](https://github.com/JohnThre)
 
 ## 📊 Stats
 
-![GitHub stars](https://img.shields.io/github/stars/username/iB-theme?style=social)
-![GitHub forks](https://img.shields.io/github/forks/username/iB-theme?style=social)
-![GitHub issues](https://img.shields.io/github/issues/username/iB-theme)
-![GitHub pull requests](https://img.shields.io/github/issues-pr/username/iB-theme)
+![GitHub stars](https://img.shields.io/github/stars/JohnThre/iB-theme?style=social)
+![GitHub forks](https://img.shields.io/github/forks/JohnThre/iB-theme?style=social)
+![GitHub issues](https://img.shields.io/github/issues/JohnThre/iB-theme)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/JohnThre/iB-theme)
 
 ---
 
