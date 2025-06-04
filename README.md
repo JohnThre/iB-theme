@@ -6,8 +6,6 @@
 
 > IBM-inspired code editor theme for Cursor IDE, GNU Emacs and VIM.
 
-![iB-theme Preview](https://via.placeholder.com/800x400/161616/ffffff?text=iB-theme+Preview)
-
 ## Overview
 
 iB-theme is a professional color scheme based on IBM's Carbon Design System, providing both dark and light variants optimized for coding productivity and visual comfort. Designed with enterprise development environments in mind, it offers exceptional readability and a modern aesthetic.
