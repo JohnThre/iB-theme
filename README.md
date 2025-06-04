@@ -17,7 +17,7 @@ iB-theme is a professional color scheme based on IBM's Carbon Design System, pro
 - 🎯 **IBM Carbon Design System** inspired color palette
 - 🌓 **Dark and Light variants** for different preferences and lighting conditions
 - 👁️ **Optimized for readability** with high contrast and carefully selected colors
-- 🔧 **Multi-editor support** - Works with Cursor IDE, GNU Emacs, and VIM
+- 🔧 **Multi-editor support** - Works with Cursor IDE, GNU Emacs, and VIM/Neovim
 - 💼 **Professional appearance** suitable for enterprise development environments
 - ♿ **Accessibility focused** with WCAG compliant color contrasts
 - 🚀 **Performance optimized** for smooth editing experience
@@ -100,10 +100,45 @@ For detailed Emacs installation and usage instructions, see [emacs/README.md](em
 
 #### VIM/Neovim
 
-```vim
-" VIM theme files will be provided in future releases
-" Stay tuned for v1.1.0
+**Automatic Installation (Recommended)**:
+```bash
+cd vim
+chmod +x install-vim.sh
+./install-vim.sh
 ```
+
+**Manual Installation**:
+```bash
+# Create colors directory
+mkdir -p ~/.vim/colors
+
+# Copy theme files
+cp vim/colors/ib-theme-dark.vim ~/.vim/colors/
+cp vim/colors/ib-theme-light.vim ~/.vim/colors/
+
+# Add to your .vimrc
+echo "colorscheme ib-theme-dark" >> ~/.vimrc
+# or for light theme
+echo "colorscheme ib-theme-light" >> ~/.vimrc
+```
+
+**Plugin Manager Installation**:
+```vim
+" Vim-Plug
+Plug 'themanpfc/iB-theme', {'rtp': 'vim/'}
+
+" Vundle
+Plugin 'themanpfc/iB-theme'
+```
+
+**Interactive Loading**:
+```vim
+:colorscheme ib-theme-dark
+" or
+:colorscheme ib-theme-light
+```
+
+For detailed VIM installation and usage instructions, see [vim/README.md](vim/README.md).
 
 ## 🎨 Color Palette
 
@@ -192,8 +227,8 @@ We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.
 - [x] Dark and Light themes
 - [x] GNU Emacs support (v1.0.0) ✨ **NEW!**
 - [x] GNU ELPA preparation (v1.0.0) ✨ **NEW!**
+- [x] VIM/Neovim support (v1.1.0) ✨ **NEW!**
 - [ ] GNU ELPA submission (pending FSF copyright assignment)
-- [ ] VIM/Neovim support (v1.1.0)
 - [ ] JetBrains IDEs support (v1.2.0)
 - [ ] Sublime Text support (v1.2.0)
 - [ ] Additional color variants (v2.0.0)

@@ -9,13 +9,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 - 🎉 **GNU Emacs support** - Complete theme implementation for Emacs
+- 🎉 **VIM/Neovim support** - Complete theme implementation for VIM
 - 📦 **GNU ELPA preparation** - Package ready for GNU ELPA submission
 - Dark theme for GNU Emacs (`ib-theme-dark-theme.el`)
 - Light theme for GNU Emacs (`ib-theme-light-theme.el`)
+- Dark theme for VIM (`vim/colors/ib-theme-dark.vim`)
+- Light theme for VIM (`vim/colors/ib-theme-light.vim`)
 - Main package file (`ib-theme.el`) with proper autoloads
 - Automatic installation script for Emacs (`install-emacs.sh`)
+- Automatic installation script for VIM (`vim/install-vim.sh`)
 - Theme validation test script (`test-themes.el`)
 - GNU ELPA submission documentation and guides
+- Comprehensive VIM support including:
+  - Terminal and GUI VIM compatibility
+  - 256-color and true color support
+  - Popular plugin integration (NERDTree, Git, Markdown)
+  - Theme switching functionality
+  - Cross-platform installation support
 - Comprehensive Emacs package support including:
   - Core Emacs (font-lock, mode-line, minibuffer, search)
   - Org Mode (headers, code blocks, links)
@@ -26,7 +36,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Which-key, Rainbow Delimiters, Web Mode
   - Markdown, Treemacs, LSP support
 - Dedicated Emacs README with installation and usage instructions
+- Dedicated VIM README with installation and usage instructions
 - Theme switching function for Emacs users
+- Theme switching function for VIM users (F5 key mapping)
 
 ### Enhanced
 - Updated copyright assignment to Free Software Foundation
