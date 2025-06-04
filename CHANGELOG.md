@@ -5,7 +5,52 @@ All notable changes to the iB-theme project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [1.0.0] - 2025-06-04
+## [1.1.0] - 2024-12-19
+
+### Added
+- 🎉 **GNU Emacs support** - Complete theme implementation for Emacs
+- 📦 **GNU ELPA preparation** - Package ready for GNU ELPA submission
+- Dark theme for GNU Emacs (`ib-theme-dark-theme.el`)
+- Light theme for GNU Emacs (`ib-theme-light-theme.el`)
+- Main package file (`ib-theme.el`) with proper autoloads
+- Automatic installation script for Emacs (`install-emacs.sh`)
+- Theme validation test script (`test-themes.el`)
+- GNU ELPA submission documentation and guides
+- Comprehensive Emacs package support including:
+  - Core Emacs (font-lock, mode-line, minibuffer, search)
+  - Org Mode (headers, code blocks, links)
+  - Magit (branch indicators, diff highlighting)
+  - Company (completion tooltips)
+  - Flycheck (error/warning indicators)
+  - Helm and Ivy (selection and matching)
+  - Which-key, Rainbow Delimiters, Web Mode
+  - Markdown, Treemacs, LSP support
+- Dedicated Emacs README with installation and usage instructions
+- Theme switching function for Emacs users
+
+### Enhanced
+- Updated copyright assignment to Free Software Foundation
+- Improved package headers to meet GNU ELPA standards
+- Added proper `;;;###autoload` comments for package discovery
+- Updated author email to `themanpfc@outlook.com`
+- Enhanced documentation for multi-editor support
+- Updated main README with GNU ELPA information
+
+### Technical Details
+- Emacs themes compatible with Emacs 24.1+
+- Proper `custom-theme-load-path` integration
+- Autoload functionality for theme discovery
+- Support for both `~/.emacs.d` and `~/.config/emacs` configurations
+- GNU ELPA compliant package structure
+- FSF copyright assignment ready
+
+### Documentation
+- `GNU-ELPA-SUBMISSION.md` - Complete submission guide
+- `GNU-ELPA-CHECKLIST.md` - Submission process checklist
+- `emacs/README-ELPA.md` - GNU ELPA specific documentation
+- Updated project roadmap with GNU ELPA status
+
+## [1.0.0] - 2024-12-04
 
 ### Added
 - Initial release of iB-theme
@@ -41,8 +86,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Planned]
 
 ### Future Releases
-- GNU Emacs theme support
-- VIM theme support
-- Additional color variants
+- VIM/Neovim theme support (v1.2.0)
+- JetBrains IDEs support (v1.3.0)
+- Sublime Text support (v1.3.0)
+- Additional color variants (v2.0.0)
 - Enhanced language-specific syntax highlighting
 - Custom icon theme integration 

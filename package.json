@@ -2,7 +2,7 @@
   "name": "ib-theme",
   "displayName": "iB-theme",
   "description": "IBM style code editor theme for Cursor IDE, GNU Emacs and VIM",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "publisher": "ib-theme",
   "license": "GPL-3.0",
   "engines": {
@@ -36,11 +36,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/username/iB-theme"
+    "url": "https://github.com/JohnThre/iB-theme"
   },
-  "homepage": "https://github.com/username/iB-theme",
+  "homepage": "https://github.com/JohnThre/iB-theme",
   "bugs": {
-    "url": "https://github.com/username/iB-theme/issues"
+    "url": "https://github.com/JohnThre/iB-theme/issues"
   },
   "author": {
     "name": "iB-theme",
