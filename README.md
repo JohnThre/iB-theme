@@ -4,7 +4,7 @@
 [![Version](https://img.shields.io/badge/version-1.0.0-green.svg)](https://github.com/JohnThre/iB-theme/releases)
 [![Validate Theme](https://github.com/JohnThre/iB-theme/workflows/Validate%20Theme/badge.svg)](https://github.com/JohnThre/iB-theme/actions)
 
-![iB-theme Preview](https://imgur.com/BpeOoAK)
+![iB-theme Preview](https://imgur.com/BpeOoAK.png)
 
 > IBM-inspired code editor theme for Cursor IDE, GNU Emacs and VIM.
 
