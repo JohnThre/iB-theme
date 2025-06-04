@@ -24,12 +24,12 @@ The iB-theme project has been successfully prepared for submission to GNU ELPA (
 ### 2. Metadata Compliance ✅
 
 **Updated all package headers**:
-- Author: `iB-theme <themanpfc@outlook.com>`
-- Maintainer: `iB-theme <themanpfc@outlook.com>`
+- Author: `Pengfan Chang <jnc@freew.org>`
+- Maintainer: `Pengfan Chang <jnc@freew.org>`
 - Version: `1.0.0` (dotted numeric format)
-- Package-Requires: `((emacs "24.1"))`
+- Package-Requires: `((emacs "28"))`
 - Keywords: Relevant theme and IBM keywords
-- URL: `https://github.com/themanpfc/iB-theme`
+- URL: `https://github.com/JohnThre/iB-theme`
 
 ### 3. Copyright and Licensing ✅
 
@@ -160,13 +160,13 @@ emacs/
 
 ## Contact Information
 
-- **Author**: iB-theme <themanpfc@outlook.com>
-- **Project**: https://github.com/themanpfc/iB-theme
+- **Author**: Pengfan Chang <jnc@freew.org>
+- **Project**: https://github.com/JohnThre/iB-theme
 - **License**: GPL v3+
 - **Status**: Ready for submission
 
 ---
 
-**Prepared by**: iB-theme development team  
-**Date**: 2024-12-19  
+**Prepared by**: Pengfan Chang <jnc@freew.org>  
+**Date**: 2025-06-04  
 **Status**: ✅ Complete and ready for FSF copyright assignment 

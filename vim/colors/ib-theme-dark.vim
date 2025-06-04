@@ -1,7 +1,7 @@
 " ib-theme-dark.vim - IBM-inspired dark theme for VIM
-" Maintainer: iB-theme <themanpfc@outlook.com>
+" Maintainer: Pengfan Chang <jnc@freew.org>
 " Version: 1.0.0
-" URL: https://github.com/themanpfc/iB-theme
+" URL: https://github.com/JohnThre/iB-theme
 " License: GPL v3+
 
 " Description:

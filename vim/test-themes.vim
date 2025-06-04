@@ -1,5 +1,5 @@
 " test-themes.vim - Test script for iB-theme VIM themes
-" Maintainer: iB-theme <themanpfc@outlook.com>
+" Maintainer: Pengfan Chang <jnc@freew.org>
 " Version: 1.0.0
 " License: GPL v3+
 

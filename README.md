@@ -125,10 +125,10 @@ echo "colorscheme ib-theme-light" >> ~/.vimrc
 **Plugin Manager Installation**:
 ```vim
 " Vim-Plug
-Plug 'themanpfc/iB-theme', {'rtp': 'vim/'}
+Plug 'JohnThre/iB-theme', {'rtp': 'vim/'}
 
 " Vundle
-Plugin 'themanpfc/iB-theme'
+Plugin 'JohnThre/iB-theme'
 ```
 
 **Interactive Loading**:

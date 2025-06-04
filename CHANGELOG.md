@@ -5,7 +5,7 @@ All notable changes to the iB-theme project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [1.1.0] - 2024-12-19
+## [1.1.0] - 2025-06-04
 
 ### Added
 - 🎉 **GNU Emacs support** - Complete theme implementation for Emacs
@@ -44,12 +44,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Updated copyright assignment to Free Software Foundation
 - Improved package headers to meet GNU ELPA standards
 - Added proper `;;;###autoload` comments for package discovery
-- Updated author email to `themanpfc@outlook.com`
+- Updated author email to `jnc@freew.org`
 - Enhanced documentation for multi-editor support
 - Updated main README with GNU ELPA information
 
 ### Technical Details
-- Emacs themes compatible with Emacs 24.1+
+- Emacs themes compatible with Emacs 28+
 - Proper `custom-theme-load-path` integration
 - Autoload functionality for theme discovery
 - Support for both `~/.emacs.d` and `~/.config/emacs` configurations
@@ -62,7 +62,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `emacs/README-ELPA.md` - GNU ELPA specific documentation
 - Updated project roadmap with GNU ELPA status
 
-## [1.0.0] - 2024-12-04
+## [1.0.0] - 2025-06-04
 
 ### Added
 - Initial release of iB-theme

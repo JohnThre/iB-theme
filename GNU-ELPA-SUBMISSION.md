@@ -49,9 +49,9 @@ Package Details:
 - Name: ib-theme
 - Description: IBM-inspired themes for GNU Emacs based on IBM Carbon Design System
 - Version: 1.0.0
-- Author: iB-theme <themanpfc@outlook.com>
+- Author: Pengfan Chang <jnc@freew.org>
 - License: GPL v3+
-- URL: https://github.com/themanpfc/iB-theme
+- URL: https://github.com/JohnThre/iB-theme
 
 The package provides both dark and light theme variants implementing the IBM Carbon Design System color palette. It supports 50+ popular Emacs packages and has been designed for professional use with excellent readability.
 
@@ -123,8 +123,8 @@ After acceptance:
 ## Contact
 
 For questions about this submission:
-- Author: iB-theme <themanpfc@outlook.com>
-- Project URL: https://github.com/themanpfc/iB-theme
+- Author: Pengfan Chang <jnc@freew.org>
+- Project URL: https://github.com/JohnThre/iB-theme
 
 ---
 

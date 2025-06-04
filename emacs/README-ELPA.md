@@ -74,9 +74,9 @@ The themes provide custom faces for:
 
 ## Author Information
 
-- Author: iB-theme <themanpfc@outlook.com>
-- Maintainer: iB-theme <themanpfc@outlook.com>
-- URL: https://github.com/themanpfc/iB-theme
+- Author: Pengfan Chang <jnc@freew.org>
+- Maintainer: Pengfan Chang <jnc@freew.org>
+- URL: https://github.com/JohnThre/iB-theme
 - License: GPL v3+
 
 ## Submission Notes

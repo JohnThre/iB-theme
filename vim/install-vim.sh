@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # iB-theme VIM Installation Script
-# Maintainer: iB-theme <themanpfc@outlook.com>
+# Maintainer: Pengfan Chang <jnc@freew.org>
 # Version: 1.0.0
 # License: GPL v3+
 
@@ -174,7 +174,7 @@ echo ""
 
 echo -e "${BLUE}🔗 More Information:${NC}"
 echo "• VIM README: $SCRIPT_DIR/README.md"
-echo "• Project URL: https://github.com/themanpfc/iB-theme"
+echo "• Project URL: https://github.com/JohnThre/iB-theme"
 echo ""
 
 echo -e "${GREEN}Thank you for using iB-theme! 🎨${NC}" 

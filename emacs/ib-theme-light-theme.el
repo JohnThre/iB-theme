@@ -1,13 +1,13 @@
 ;;; ib-theme-light-theme.el --- IBM-inspired light theme for GNU Emacs
 
-;; Copyright (C) 2024 Free Software Foundation, Inc.
+;; Copyright (C) 2025 Free Software Foundation, Inc.
 
-;; Author: iB-theme <themanpfc@outlook.com>
-;; Maintainer: iB-theme <themanpfc@outlook.com>
+;; Author: Pengfan Chang <jnc@freew.org>
+;; Maintainer: Pengfan Chang <jnc@freew.org>
 ;; Version: 1.0.0
-;; Package-Requires: ((emacs "24.1"))
+;; Package-Requires: ((emacs "28"))
 ;; Keywords: faces, theme, light, ibm
-;; URL: https://github.com/themanpfc/iB-theme
+;; URL: https://github.com/JohnThre/iB-theme
 
 ;; This file is part of GNU Emacs.
 

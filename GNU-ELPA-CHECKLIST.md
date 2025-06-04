@@ -13,7 +13,7 @@
 - [x] All files use GPL v3+ license
 - [x] Copyright assigned to Free Software Foundation, Inc.
 - [x] Proper license headers in all files
-- [x] Author email updated to `themanpfc@outlook.com`
+- [x] Author email updated to `jnc@freew.org`
 
 ### ✅ Package Metadata
 - [x] Version field uses dotted numeric format (1.0.0)
@@ -83,8 +83,8 @@
 
 ## Contact Information
 
-- **Author**: iB-theme <themanpfc@outlook.com>
-- **Project URL**: https://github.com/themanpfc/iB-theme
+- **Author**: Pengfan Chang <jnc@freew.org>
+- **Project URL**: https://github.com/JohnThre/iB-theme
 - **GNU ELPA**: https://elpa.gnu.org/
 - **FSF Copyright**: assign@gnu.org
 - **Emacs Devel**: emacs-devel@gnu.org
@@ -97,4 +97,4 @@
 
 ---
 
-Last Updated: 2024-12-19 
+Last Updated: 2025-06-04 

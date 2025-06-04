@@ -23,7 +23,7 @@ The iB-theme for VIM implements the IBM Carbon Design System color palette, offe
 1. **Download the theme files**:
    ```bash
    # Clone the repository
-   git clone https://github.com/themanpfc/iB-theme.git
+   git clone https://github.com/JohnThre/iB-theme.git
    cd iB-theme/vim
    ```
 
@@ -50,7 +50,7 @@ The iB-theme for VIM implements the IBM Carbon Design System color palette, offe
 #### Vim-Plug
 Add to your `~/.vimrc`:
 ```vim
-Plug 'themanpfc/iB-theme', {'rtp': 'vim/'}
+Plug 'JohnThre/iB-theme', {'rtp': 'vim/'}
 ```
 
 Then run:
@@ -61,13 +61,13 @@ Then run:
 #### Vundle
 Add to your `~/.vimrc`:
 ```vim
-Plugin 'themanpfc/iB-theme'
+Plugin 'JohnThre/iB-theme'
 ```
 
 #### Pathogen
 ```bash
 cd ~/.vim/bundle
-git clone https://github.com/themanpfc/iB-theme.git
+git clone https://github.com/JohnThre/iB-theme.git
 ```
 
 ### Method 3: Automatic Installation Script
@@ -249,4 +249,4 @@ This project is licensed under the GNU General Public License v3.0 - see the [LI
 ---
 
 **Part of the iB-theme project** - IBM-inspired themes for multiple editors  
-🔗 **Main Project**: https://github.com/themanpfc/iB-theme 
+🔗 **Main Project**: https://github.com/JohnThre/iB-theme 

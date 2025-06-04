@@ -138,10 +138,10 @@ echo "colorscheme ib-theme-dark" >> ~/.vimrc
 ### 3. Plugin Manager
 ```vim
 " Vim-Plug
-Plug 'themanpfc/iB-theme', {'rtp': 'vim/'}
+Plug 'JohnThre/iB-theme', {'rtp': 'vim/'}
 
 " Vundle
-Plugin 'themanpfc/iB-theme'
+Plugin 'JohnThre/iB-theme'
 ```
 
 ## Advanced Features
@@ -214,8 +214,8 @@ Plugin 'themanpfc/iB-theme'
 
 ## Contact Information
 
-- **Author**: iB-theme <themanpfc@outlook.com>
-- **Project**: https://github.com/themanpfc/iB-theme
+- **Author**: Pengfan Chang <jnc@freew.org>
+- **Project**: https://github.com/JohnThre/iB-theme
 - **VIM Documentation**: vim/README.md
 - **License**: GPL v3+
 
@@ -223,4 +223,4 @@ Plugin 'themanpfc/iB-theme'
 
 **Status**: ✅ Complete and ready for use  
 **Version**: 1.1.0  
-**Date**: 2024-12-19 
+**Date**: 2025-06-04 
