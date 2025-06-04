@@ -8,21 +8,21 @@
 
 ![iB-theme Preview](https://via.placeholder.com/800x400/161616/ffffff?text=iB-theme+Preview)
 
-## 🎨 Overview
+## Overview
 
 iB-theme is a professional color scheme based on IBM's Carbon Design System, providing both dark and light variants optimized for coding productivity and visual comfort. Designed with enterprise development environments in mind, it offers exceptional readability and a modern aesthetic.
 
-## ✨ Features
+## Features
 
-- 🎯 **IBM Carbon Design System** inspired color palette
-- 🌓 **Dark and Light variants** for different preferences and lighting conditions
-- 👁️ **Optimized for readability** with high contrast and carefully selected colors
-- 🔧 **Multi-editor support** - Works with Cursor IDE, GNU Emacs, and VIM
-- 💼 **Professional appearance** suitable for enterprise development environments
-- ♿ **Accessibility focused** with WCAG compliant color contrasts
-- 🚀 **Performance optimized** for smooth editing experience
+- **IBM Carbon Design System** inspired color palette
+- **Dark and Light variants** for different preferences and lighting conditions
+- **Optimized for readability** with high contrast and carefully selected colors
+- **Multi-editor support** - Works with Cursor IDE, GNU Emacs, and VIM
+- **Professional appearance** suitable for enterprise development environments
+- **Accessibility focused** with WCAG compliant color contrasts
+- **Performance optimized** for smooth editing experience
 
-## 📦 Installation
+## Installation
 
 ### Method 1: VS Code Marketplace (Coming Soon)
 ```bash
@@ -72,7 +72,7 @@ code --install-extension ib-theme.ib-theme
 " Stay tuned for v1.1.0
 ```
 
-## 🎨 Color Palette
+## Color Palette
 
 ### Dark Theme
 | Element | Color | Hex Code |
@@ -100,7 +100,7 @@ code --install-extension ib-theme.ib-theme
 | Classes | IBM Magenta 70 | `#9f1853` |
 | Numbers | IBM Red 60 | `#da1e28` |
 
-## 🔧 Supported Languages
+## Supported Languages
 
 The theme provides optimized syntax highlighting for:
 
@@ -112,7 +112,7 @@ The theme provides optimized syntax highlighting for:
 **Configuration**: TOML, INI, XML  
 **And many more...**
 
-## 🚀 Development
+## Development
 
 ### Building from Source
 
@@ -140,7 +140,7 @@ jsonlint themes/ib-theme-dark.json
 jsonlint themes/ib-theme-light.json
 ```
 
-## 🤝 Contributing
+## Contributing
 
 We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details.
 
@@ -159,25 +159,22 @@ We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.
 - [x] Dark and Light themes
 - [ ] GNU Emacs support (v1.1.0)
 - [ ] VIM/Neovim support (v1.1.0)
-- [ ] JetBrains IDEs support (v1.2.0)
-- [ ] Sublime Text support (v1.2.0)
-- [ ] Additional color variants (v2.0.0)
 
-## 📄 License
+## License
 
 This project is licensed under the GNU General Public License v3.0 - see the [LICENSE](LICENSE) file for details.
 
-## 👨‍💻 Author
+## Author
 
 **iB-theme Team**  
-📧 Email: jnc@freew.org  
-🐙 GitHub: [@username](https://github.com/username)
+Email: jnc@freew.org  
+GitHub: [@JohnThre](https://github.com/JohnThre)
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
-- 🎨 Inspired by [IBM's Carbon Design System](https://carbondesignsystem.com/)
-- 🎯 Colors based on [IBM Design Language](https://www.ibm.com/design/language/)
-- 💡 Built for modern development workflows
+- Inspired by [IBM's Carbon Design System](https://carbondesignsystem.com/)
+- Colors based on [IBM Design Language](https://www.ibm.com/design/language/)
+- Built for modern development workflows
 - 🇺🇸 Made with ❤️ in the USA
 
 ## 📊 Stats
