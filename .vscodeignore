@@ -1,0 +1,19 @@
+# Ignore development files
+.cursor/
+install.sh
+*.vsix
+
+# Ignore hidden files
+.DS_Store
+.gitignore
+
+# Ignore development and build files
+node_modules/
+.vscode/
+src/
+test/
+*.test.*
+*.spec.*
+
+# Ignore documentation files that aren't needed in the package
+CHANGELOG.md 

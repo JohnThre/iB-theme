@@ -1,0 +1,49 @@
+{
+  "name": "ib-theme",
+  "displayName": "iB-theme",
+  "description": "IBM style code editor theme for Cursor IDE, GNU Emacs and VIM",
+  "version": "1.0.0",
+  "publisher": "ib-theme",
+  "license": "GPL-3.0",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "keywords": [
+    "theme",
+    "ibm",
+    "dark",
+    "light",
+    "cursor",
+    "emacs",
+    "vim"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "iB-theme Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/ib-theme-dark.json"
+      },
+      {
+        "label": "iB-theme Light",
+        "uiTheme": "vs",
+        "path": "./themes/ib-theme-light.json"
+      }
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/username/iB-theme"
+  },
+  "homepage": "https://github.com/username/iB-theme",
+  "bugs": {
+    "url": "https://github.com/username/iB-theme/issues"
+  },
+  "author": {
+    "name": "iB-theme",
+    "email": "jnc@freew.org"
+  }
+} 

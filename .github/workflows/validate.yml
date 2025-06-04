@@ -1,0 +1,51 @@
+name: Validate Theme
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+    
+    - name: Install dependencies
+      run: |
+        npm install -g @vscode/vsce
+        npm install -g jsonlint
+    
+    - name: Validate JSON files
+      run: |
+        echo "Validating theme JSON files..."
+        jsonlint themes/ib-theme-dark.json
+        jsonlint themes/ib-theme-light.json
+        echo "JSON validation passed!"
+    
+    - name: Validate package.json
+      run: |
+        echo "Validating package.json..."
+        jsonlint package.json
+        echo "package.json validation passed!"
+    
+    - name: Package extension
+      run: |
+        echo "Packaging extension..."
+        vsce package --no-yarn
+        echo "Extension packaged successfully!"
+    
+    - name: Check file sizes
+      run: |
+        echo "Checking theme file sizes..."
+        ls -la themes/
+        echo "Package size:"
+        ls -la *.vsix 
