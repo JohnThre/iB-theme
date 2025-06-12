@@ -1,5 +1,9 @@
 # iB-theme
 
+<p align="center">
+  <img src="iB-theme.svg" alt="iB-theme Logo" width="128" height="128">
+</p>
+
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 [![Version](https://img.shields.io/badge/version-1.0.0-green.svg)](https://github.com/JohnThre/iB-theme/releases)
 [![Validate Theme](https://github.com/JohnThre/iB-theme/workflows/Validate%20Theme/badge.svg)](https://github.com/JohnThre/iB-theme/actions)

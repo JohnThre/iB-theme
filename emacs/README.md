@@ -1,5 +1,9 @@
 # iB-theme for GNU Emacs
 
+<p align="center">
+  <img src="../iB-theme.svg" alt="iB-theme Logo" width="128" height="128">
+</p>
+
 IBM-inspired themes for GNU Emacs based on the Carbon Design System.
 
 ## Features

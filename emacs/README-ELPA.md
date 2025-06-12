@@ -1,5 +1,9 @@
 # iB-theme for GNU ELPA
 
+<p align="center">
+  <img src="../iB-theme.svg" alt="iB-theme Logo" width="128" height="128">
+</p>
+
 ## Package Description
 
 IBM-inspired themes for GNU Emacs based on IBM Carbon Design System. This package provides both dark and light variants with professional appearance and excellent readability.
