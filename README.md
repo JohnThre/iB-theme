@@ -1,7 +1,7 @@
 # iB-theme
 
 <p align="center">
-  <img src="iB-theme.svg" alt="iB-theme Logo" width="128" height="128">
+  <img src="iB-theme.png" alt="iB-theme Logo" width="128" height="128">
 </p>
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)

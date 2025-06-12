@@ -1,7 +1,7 @@
 # iB-theme for GNU ELPA
 
 <p align="center">
-  <img src="../iB-theme.svg" alt="iB-theme Logo" width="128" height="128">
+  <img src="../iB-theme.png" alt="iB-theme Logo" width="128" height="128">
 </p>
 
 ## Package Description
