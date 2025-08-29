@@ -5,19 +5,21 @@ All notable changes to the iB-theme project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [1.1.1] - 2025-08-29
+## [1.2.0] - 2025-08-29
+
+### Added
+- 🎉 **VS Code Marketplace release** - Official publication to VS Code Marketplace
+- 🎉 **Open VSX Registry support** - First-time publication to Open VSX Registry
+- 📦 **Enhanced build system** - Improved VSIX packaging and distribution
 
 ### Fixed
-- 🔧 **Error handling improvements** - Enhanced CI/CD pipeline with proper error handling
-- 🔧 **Installation script fixes** - Added Cursor IDE support and error validation
-- 🔧 **Package scoping** - Updated package configuration for better security
-- 🔧 **Documentation updates** - Corrected dates and version information
-- 🔧 **Build improvements** - Enhanced GitHub Actions workflow reliability
+- 🔧 **Build script improvements** - Cleaned up duplicate error handling
+- 🔧 **Package optimization** - Enhanced extension packaging for marketplace distribution
 
 ### Enhanced
-- Improved installation scripts with better error messages
-- Updated CI/CD pipeline for more robust validation
-- Enhanced cross-platform compatibility
+- Improved marketplace compatibility
+- Enhanced extension metadata for better discoverability
+- Optimized package size for faster installation
 
 ## [1.1.0] - 2025-06-04
 

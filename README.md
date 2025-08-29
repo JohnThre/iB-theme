@@ -5,7 +5,7 @@
 </p>
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
-[![Version](https://img.shields.io/badge/version-1.1.1-green.svg)](https://github.com/JohnThre/iB-theme/releases)
+[![Version](https://img.shields.io/badge/version-1.2.0-green.svg)](https://github.com/JohnThre/iB-theme/releases)
 [![Validate Theme](https://github.com/JohnThre/iB-theme/workflows/Validate%20Theme/badge.svg)](https://github.com/JohnThre/iB-theme/actions)
 
 ![iB-theme Preview of VS Code](https://imgur.com/BpeOoAK.png)
@@ -28,13 +28,19 @@ iB-theme is a professional color scheme based on IBM's Carbon Design System, pro
 
 ## Installation
 
-### Method 1: VS Code Marketplace (Coming Soon)
+### Method 1: VS Code Marketplace
 ```bash
-# Will be available via VS Code marketplace
+# Install from VS Code Marketplace
 code --install-extension ib-theme.ib-theme
 ```
 
-### Method 2: Manual Installation
+### Method 2: Open VSX Registry
+```bash
+# Install from Open VSX Registry (for VS Code alternatives)
+code --install-extension ib-theme.ib-theme
+```
+
+### Method 3: Manual Installation
 
 #### Cursor IDE / VS Code
 

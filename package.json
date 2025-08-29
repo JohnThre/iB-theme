@@ -2,8 +2,8 @@
   "name": "ib-theme",
   "displayName": "iB-theme",
   "description": "IBM style code editor theme for Cursor IDE, GNU Emacs and VIM",
-  "version": "1.1.1",
-  "publisher": "Pengfan Chang",
+  "version": "1.2.0",
+  "publisher": "ib-theme",
   "license": "GPL-3.0",
   "icon": "iB-theme.png",
   "engines": {

@@ -16,7 +16,20 @@ NC='\033[0m' # No Color
 # Build configuration
 BUILD_DIR="build"
 DIST_DIR="dist"
-VERSION=$(grep '"version"' package.json | sed 's/.*"version": "\([^"]*\)".*/\1/')
+if [ ! -f "package.json" ]; then
+    echo -e "${RED}[ERROR]${NC} package.json not found"
+    exit 1
+fi
+
+VERSION=$(grep '"version"' package.json 2>/dev/null | sed 's/.*"version": "\([^"]*\)".*/\1/' 2>/dev/null) || {
+    echo -e "${RED}[ERROR]${NC} Could not extract version from package.json"
+    exit 1
+}
+
+if [ -z "$VERSION" ]; then
+    echo -e "${RED}[ERROR]${NC} Version is empty in package.json"
+    exit 1
+fi
 
 print_info() {
     echo -e "${BLUE}[INFO]${NC} $1"
