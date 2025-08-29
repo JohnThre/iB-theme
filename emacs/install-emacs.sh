@@ -59,8 +59,28 @@ install_themes() {
     
     # Copy theme files
     print_status "Copying theme files..."
-    cp "ib-theme-dark-theme.el" "$THEMES_DIR/"
-    cp "ib-theme-light-theme.el" "$THEMES_DIR/"
+    
+    # Check if source files exist
+    if [ ! -f "ib-theme-dark-theme.el" ]; then
+        print_error "Source file not found: ib-theme-dark-theme.el"
+        exit 1
+    fi
+    
+    if [ ! -f "ib-theme-light-theme.el" ]; then
+        print_error "Source file not found: ib-theme-light-theme.el"
+        exit 1
+    fi
+    
+    # Copy with error checking
+    if ! cp "ib-theme-dark-theme.el" "$THEMES_DIR/"; then
+        print_error "Failed to copy ib-theme-dark-theme.el"
+        exit 1
+    fi
+    
+    if ! cp "ib-theme-light-theme.el" "$THEMES_DIR/"; then
+        print_error "Failed to copy ib-theme-light-theme.el"
+        exit 1
+    fi
     
     print_success "Theme files copied successfully!"
     

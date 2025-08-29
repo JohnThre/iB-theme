@@ -1,5 +1,6 @@
 # VS Code Extension files
 *.vsix
+!ib-theme-*.vsix
 node_modules/
 out/
 dist/
@@ -60,4 +61,5 @@ jspm_packages/
 
 # Build files
 build/
-dist/ 
+dist/
+checksums.txt 

@@ -29,9 +29,13 @@ fi
 
 echo -e "${GREEN}✅ VIM found: $(vim --version | head -n1)${NC}"
 
-# Determine VIM directory
+# Determine OS and VIM directory
+is_windows() {
+    [[ "$OSTYPE" == "msys" || "$OSTYPE" == "win32" ]]
+}
+
 VIM_DIR="$HOME/.vim"
-if [[ "$OSTYPE" == "msys" || "$OSTYPE" == "win32" ]]; then
+if is_windows; then
     VIM_DIR="$HOME/vimfiles"
 fi
 
@@ -61,7 +65,7 @@ fi
 
 # Check for existing .vimrc
 VIMRC="$HOME/.vimrc"
-if [[ "$OSTYPE" == "msys" || "$OSTYPE" == "win32" ]]; then
+if is_windows; then
     VIMRC="$HOME/_vimrc"
 fi
 
@@ -102,8 +106,9 @@ if [[ -n "$THEME" ]]; then
     
     # Create backup if .vimrc exists
     if [[ -f "$VIMRC" ]]; then
-        cp "$VIMRC" "$VIMRC.backup.$(date +%Y%m%d_%H%M%S)"
-        echo -e "${GREEN}✅ Created backup: $VIMRC.backup.$(date +%Y%m%d_%H%M%S)${NC}"
+        BACKUP_DATE=$(date +%Y%m%d_%H%M%S)
+        cp "$VIMRC" "$VIMRC.backup.$BACKUP_DATE"
+        echo -e "${GREEN}✅ Created backup: $VIMRC.backup.$BACKUP_DATE${NC}"
     fi
     
     # Add configuration to .vimrc

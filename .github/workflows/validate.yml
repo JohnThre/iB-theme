@@ -26,26 +26,30 @@ jobs:
     
     - name: Validate JSON files
       run: |
+        set -e
         echo "Validating theme JSON files..."
-        jsonlint themes/ib-theme-dark.json
-        jsonlint themes/ib-theme-light.json
+        jsonlint themes/ib-theme-dark.json || { echo "Error: Dark theme JSON validation failed"; exit 1; }
+        jsonlint themes/ib-theme-light.json || { echo "Error: Light theme JSON validation failed"; exit 1; }
         echo "JSON validation passed!"
     
     - name: Validate package.json
       run: |
+        set -e
         echo "Validating package.json..."
-        jsonlint package.json
+        jsonlint package.json || { echo "Error: package.json validation failed"; exit 1; }
         echo "package.json validation passed!"
     
     - name: Package extension
       run: |
+        set -e
         echo "Packaging extension..."
-        vsce package --no-yarn
+        vsce package --no-yarn || { echo "Error: Extension packaging failed"; exit 1; }
         echo "Extension packaged successfully!"
     
     - name: Check file sizes
       run: |
+        set -e
         echo "Checking theme file sizes..."
-        ls -la themes/
+        ls -la themes/ || { echo "Error: Cannot list theme files"; exit 1; }
         echo "Package size:"
-        ls -la *.vsix 
+        ls -la *.vsix || { echo "Error: Cannot find packaged extension"; exit 1; } 
