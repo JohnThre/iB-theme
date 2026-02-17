@@ -1,7 +1,7 @@
 {
   "name": "ib-theme",
   "displayName": "iB-theme",
-  "description": "IBM style code editor theme for Cursor IDE, GNU Emacs and VIM",
+  "description": "IBM style code editor theme for Cursor IDE, GNU Emacs, VIM, Neovim, and CotEditor",
   "version": "1.2.0",
   "publisher": "jpfchang",
   "license": "GPL-3.0",
@@ -19,7 +19,9 @@
     "light",
     "cursor",
     "emacs",
-    "vim"
+    "vim",
+    "neovim",
+    "coteditor"
   ],
   "contributes": {
     "themes": [

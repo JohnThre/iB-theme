@@ -8,7 +8,7 @@
 [![Version](https://img.shields.io/badge/version-1.2.0-green.svg)](https://github.com/JohnThre/iB-theme/releases)
 [![Validate Theme](https://github.com/JohnThre/iB-theme/workflows/Validate%20Theme/badge.svg)](https://github.com/JohnThre/iB-theme/actions)
 
-![iB-theme Preview of VS Code](https://imgur.com/BpeOoAK.png)
+![iB-theme Preview (Cursor IDE / VS Code)](https://imgur.com/BpeOoAK.png)
 
 > IBM-inspired code editor theme for Cursor IDE, GNU Emacs, VIM, Neovim, and CotEditor.
 
@@ -224,6 +224,16 @@ The theme provides optimized syntax highlighting for:
 **Documentation**: Markdown, reStructuredText  
 **Configuration**: TOML, INI, XML  
 **And many more...**
+
+## Documentation
+
+Editor-specific installation and usage:
+
+- [VIM and Neovim](vim/README.md)
+- [GNU Emacs](emacs/README.md)
+- [CotEditor (macOS)](coteditor/README.md)
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for contribution guidelines.
 
 ## Development
 

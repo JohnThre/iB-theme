@@ -93,10 +93,24 @@ Add to your `~/.vimrc`:
 Plugin 'JohnThre/iB-theme'
 ```
 
+Because the theme files live in the `vim/` subdirectory of the repository, add that directory to Vim’s runtime path in your `~/.vimrc` as well (adjust the path if Vundle uses a different bundle directory name):
+
+```vim
+set rtp+=~/.vim/bundle/iB-theme/vim
+```
+
+Then run `:PluginInstall` and restart Vim.
+
 #### Pathogen
 ```bash
 cd ~/.vim/bundle
 git clone https://github.com/JohnThre/iB-theme.git
+```
+
+Because the theme files are in the `vim/` subdirectory of the repo, add it to your runtime path in `~/.vimrc`:
+
+```vim
+set rtp+=~/.vim/bundle/iB-theme/vim
 ```
 
 ### Method 3: Automatic Installation Script

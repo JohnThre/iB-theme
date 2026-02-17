@@ -31,6 +31,7 @@ VIM support has been successfully added to the iB-theme project, providing IBM C
 **Multiple installation methods**:
 - Manual installation
 - Plugin manager support (Vim-Plug, Vundle, Pathogen)
+- **Note**: Vim-Plug with `{'rtp': 'vim/'}` is the recommended plugin-manager method. For Vundle and Pathogen, the theme files live in the `vim/` subdirectory of the repo, so you must add that directory to your runtimepath (e.g. `set rtp+=~/.vim/bundle/iB-theme/vim`). See [vim/README.md](vim/README.md) for current installation options.
 - Interactive theme selection
 - Automatic terminal optimization
 

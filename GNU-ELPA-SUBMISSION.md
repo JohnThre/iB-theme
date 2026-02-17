@@ -48,7 +48,7 @@ I would like to submit the "ib-theme" package to GNU ELPA.
 Package Details:
 - Name: ib-theme
 - Description: IBM-inspired themes for GNU Emacs based on IBM Carbon Design System
-- Version: 1.0.0
+- Version: 1.0.0 (Emacs package version; the main iB-theme project may use a different version, e.g. 1.2.0)
 - Author: Pengfan Chang <jnc@freew.org>
 - License: GPL v3+
 - URL: https://github.com/JohnThre/iB-theme

@@ -13,7 +13,8 @@ Brief description of the changes made.
 
 - [ ] Tested in Cursor IDE
 - [ ] Tested in GNU Emacs
-- [ ] Tested in VIM
+- [ ] Tested in VIM/Neovim
+- [ ] Tested in CotEditor (if applicable)
 - [ ] Both light and dark themes tested
 - [ ] Color contrast verified for accessibility
 

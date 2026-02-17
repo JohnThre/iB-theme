@@ -55,7 +55,12 @@ The themes provide styling for:
 
 ### Manual Installation
 
-1. Copy the theme files to your Emacs themes directory:
+1. Copy the theme files to your Emacs themes directory. From the **repository root**:
+   ```bash
+   mkdir -p ~/.emacs.d/themes
+   cp emacs/ib-theme-*-theme.el ~/.emacs.d/themes/
+   ```
+   Or from the **emacs** directory:
    ```bash
    mkdir -p ~/.emacs.d/themes
    cp ib-theme-*-theme.el ~/.emacs.d/themes/

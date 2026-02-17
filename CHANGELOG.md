@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - 🎉 **VS Code Marketplace release** - Official publication to VS Code Marketplace
 - 🎉 **Open VSX Registry support** - First-time publication to Open VSX Registry
+- 🎉 **CotEditor support (macOS)** - Dark and light themes for CotEditor (`.cottheme` format)
 - 📦 **Enhanced build system** - Improved VSIX packaging and distribution
 
 ### Fixed
@@ -114,9 +115,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Planned]
 
 ### Future Releases
-- VIM/Neovim theme support (v1.2.0)
-- JetBrains IDEs support (v1.3.0)
-- Sublime Text support (v1.3.0)
+- GNU ELPA submission (pending FSF copyright assignment)
+- JetBrains IDEs support (v1.2.0)
+- Sublime Text support (v1.2.0)
 - Additional color variants (v2.0.0)
 - Enhanced language-specific syntax highlighting
-- Custom icon theme integration 
+- Custom icon theme integration

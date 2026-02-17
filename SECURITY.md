@@ -6,6 +6,7 @@ We actively support the following versions of iB-theme with security updates:
 
 | Version | Supported          |
 | ------- | ------------------ |
+| 1.2.x   | :white_check_mark: |
 | 1.1.x   | :white_check_mark: |
 | 1.0.x   | :white_check_mark: |
 | < 1.0   | :x:                |
@@ -89,4 +90,4 @@ For security-related questions or concerns:
 
 ---
 
-**Note**: This security policy is effective as of August 29, 2025, and applies to iB-theme version 1.1.1 and later.
+**Note**: This security policy is effective as of August 29, 2025, and applies to iB-theme version 1.2.0 and later.

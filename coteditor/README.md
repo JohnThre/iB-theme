@@ -15,7 +15,7 @@ IBM-inspired themes for CotEditor (macOS) based on the IBM Carbon Design System.
 2. Go to **CotEditor > Settings** (or **Preferences**)
 3. Open the **Appearance** pane
 4. Under the theme list, click the **gear icon** and choose **Import…**
-5. Select `ib-theme-dark.cottheme` and/or `ib-theme-light.cottheme` from this folder
+5. Select `ib-theme-dark.cottheme` and/or `ib-theme-light.cottheme` from the `coteditor` directory of the cloned repository
 6. The themes will appear in the theme list; select one to use it
 
 ### Method 2: Install script (macOS)
@@ -28,7 +28,7 @@ chmod +x install-coteditor.sh
 ./install-coteditor.sh
 ```
 
-Then in CotEditor, open **Settings > Appearance** and choose **iB-theme Dark** or **iB-theme Light** from the theme list.
+Then in CotEditor, open **Settings** (or **Preferences**) **> Appearance** and choose **iB-theme Dark** or **iB-theme Light** from the theme list.
 
 ### Method 3: Manual copy
 

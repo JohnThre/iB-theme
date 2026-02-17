@@ -19,13 +19,13 @@ This project follows the principles of open source collaboration. Please be resp
 1. Fork the repository
 2. Clone your fork locally
 3. Make your changes
-4. Test the theme in Cursor IDE, GNU Emacs, and VIM
+4. Test the theme in Cursor IDE, GNU Emacs, VIM, Neovim, and CotEditor
 5. Submit a pull request
 
 ### Theme Development Guidelines
 
 - Follow IBM design principles and color schemes
-- Ensure compatibility with Cursor IDE, GNU Emacs, and VIM
+- Ensure compatibility with Cursor IDE, GNU Emacs, VIM, Neovim, and CotEditor
 - Test both light and dark theme variants
 - Maintain consistency across all supported editors
 

@@ -218,10 +218,20 @@ build_coteditor() {
 create_checksums() {
     print_info "Creating checksums..."
     
+    local sha_cmd
+    if command -v sha256sum &> /dev/null; then
+        sha_cmd="sha256sum"
+    elif command -v shasum &> /dev/null; then
+        sha_cmd="shasum -a 256"
+    else
+        print_error "Neither sha256sum nor shasum found. Cannot create checksums."
+        exit 1
+    fi
+    
     cd "$DIST_DIR"
     for file in *; do
         if [ -f "$file" ]; then
-            sha256sum "$file" >> checksums.txt
+            $sha_cmd "$file" >> checksums.txt
         fi
     done
     print_success "Checksums created"
