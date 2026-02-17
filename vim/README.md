@@ -49,6 +49,31 @@ The iB-theme for VIM implements the IBM Carbon Design System color palette, offe
    colorscheme ib-theme-light
    ```
 
+#### Neovim
+
+The same theme files work in Neovim. Install to Neovim's colors directory:
+
+```bash
+mkdir -p ~/.config/nvim/colors
+cp colors/ib-theme-dark.vim ~/.config/nvim/colors/
+cp colors/ib-theme-light.vim ~/.config/nvim/colors/
+```
+
+Then add to your Neovim config:
+
+- **init.vim** (`~/.config/nvim/init.vim`):
+  ```vim
+  colorscheme ib-theme-dark
+  " or
+  colorscheme ib-theme-light
+  ```
+- **init.lua** (`~/.config/nvim/init.lua`):
+  ```lua
+  vim.cmd('colorscheme ib-theme-dark')
+  -- or
+  vim.cmd('colorscheme ib-theme-light')
+  ```
+
 ### Method 2: Using a Plugin Manager
 
 #### Vim-Plug
@@ -75,6 +100,8 @@ git clone https://github.com/JohnThre/iB-theme.git
 ```
 
 ### Method 3: Automatic Installation Script
+
+The script detects Vim and/or Neovim and can install to both. When both are present, you can choose to install for Vim only, Neovim only, or both.
 
 ```bash
 cd vim

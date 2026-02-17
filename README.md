@@ -10,7 +10,7 @@
 
 ![iB-theme Preview of VS Code](https://imgur.com/BpeOoAK.png)
 
-> IBM-inspired code editor theme for Cursor IDE, GNU Emacs and VIM.
+> IBM-inspired code editor theme for Cursor IDE, GNU Emacs, VIM, Neovim, and CotEditor.
 
 ## Overview
 
@@ -21,7 +21,7 @@ iB-theme is a professional color scheme based on IBM's Carbon Design System, pro
 - **IBM Carbon Design System** inspired color palette
 - **Dark and Light variants** for different preferences and lighting conditions
 - **Optimized for readability** with high contrast and carefully selected colors
-- **Multi-editor support** - Works with Cursor IDE, GNU Emacs, and VIM/Neovim
+- **Multi-editor support** - Works with Cursor IDE, GNU Emacs, VIM, Neovim, and CotEditor
 - **Professional appearance** suitable for enterprise development environments
 - **Accessibility focused** with WCAG compliant color contrasts
 - **Performance optimized** for smooth editing experience
@@ -112,6 +112,8 @@ For detailed Emacs installation and usage instructions, see [emacs/README.md](em
 
 #### VIM/Neovim
 
+The install script detects both Vim and Neovim and can install to either or both.
+
 **Automatic Installation (Recommended)**:
 ```bash
 cd vim
@@ -119,7 +121,7 @@ chmod +x install-vim.sh
 ./install-vim.sh
 ```
 
-**Manual Installation**:
+**Manual Installation (Vim)**:
 ```bash
 # Create colors directory
 mkdir -p ~/.vim/colors
@@ -133,6 +135,18 @@ echo "colorscheme ib-theme-dark" >> ~/.vimrc
 # or for light theme
 echo "colorscheme ib-theme-light" >> ~/.vimrc
 ```
+
+**Neovim**  
+Use the same theme files. Copy to Neovim’s colors directory and add to your config:
+
+```bash
+mkdir -p ~/.config/nvim/colors
+cp vim/colors/ib-theme-dark.vim ~/.config/nvim/colors/
+cp vim/colors/ib-theme-light.vim ~/.config/nvim/colors/
+```
+
+- **init.vim** (`~/.config/nvim/init.vim`): `colorscheme ib-theme-dark` (or `ib-theme-light`)
+- **init.lua** (`~/.config/nvim/init.lua`): `vim.cmd('colorscheme ib-theme-dark')` (or `ib-theme-light`)
 
 **Plugin Manager Installation**:
 ```vim
@@ -150,7 +164,26 @@ Plugin 'JohnThre/iB-theme'
 :colorscheme ib-theme-light
 ```
 
-For detailed VIM installation and usage instructions, see [vim/README.md](vim/README.md).
+For detailed VIM and Neovim installation and usage, see [vim/README.md](vim/README.md).
+
+#### CotEditor (macOS)
+
+**Import via CotEditor**  
+1. Open CotEditor > **Settings** > **Appearance**.  
+2. Click the **gear icon** under the theme list and choose **Import…**.  
+3. Select `coteditor/ib-theme-dark.cottheme` and/or `coteditor/ib-theme-light.cottheme` from the cloned repo.  
+4. Choose **iB-theme Dark** or **iB-theme Light** from the theme list.
+
+**Install script** (copies themes into CotEditor’s application support folder):
+```bash
+cd coteditor
+chmod +x install-coteditor.sh
+./install-coteditor.sh
+```
+
+Then in CotEditor, go to **Settings > Appearance** and select the theme.
+
+For more options, see [coteditor/README.md](coteditor/README.md).
 
 ## Color Palette
 
@@ -241,6 +274,8 @@ We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.
 - [x] GNU ELPA preparation (v1.0.0) ✨ **NEW!**
 - [x] VIM/Neovim support (v1.1.0) ✨
 - [x] Enhanced error handling and installation scripts (v1.1.1) ✨ **NEW!**
+- [x] Neovim explicit install path and docs
+- [x] CotEditor support (macOS)
 - [ ] GNU ELPA submission (pending FSF copyright assignment)
 - [ ] JetBrains IDEs support (v1.2.0)
 - [ ] Sublime Text support (v1.2.0)

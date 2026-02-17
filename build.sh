@@ -108,7 +108,7 @@ validate_json() {
 create_build_structure() {
     print_info "Creating build structure..."
     
-    mkdir -p "$BUILD_DIR"/{vscode,emacs,vim}
+    mkdir -p "$BUILD_DIR"/{vscode,emacs,vim,coteditor}
     mkdir -p "$DIST_DIR"
     
     print_success "Build structure created"
@@ -192,6 +192,25 @@ build_vim() {
     cd "$BUILD_DIR/vim"
     tar -czf "../../$DIST_DIR/ib-theme-vim-$VERSION.tar.gz" colors/ README.md LICENSE
     print_success "VIM package created"
+    cd - > /dev/null
+}
+
+# Function to build CotEditor package
+build_coteditor() {
+    print_info "Building CotEditor package..."
+    
+    # Copy CotEditor files
+    for f in coteditor/*.cottheme; do
+        [ -f "$f" ] && cp "$f" "$BUILD_DIR/coteditor/"
+    done
+    cp coteditor/README.md "$BUILD_DIR/coteditor/"
+    cp coteditor/install-coteditor.sh "$BUILD_DIR/coteditor/"
+    cp LICENSE "$BUILD_DIR/coteditor/"
+    
+    # Create CotEditor package archive
+    cd "$BUILD_DIR/coteditor"
+    tar -czf "../../$DIST_DIR/ib-theme-coteditor-$VERSION.tar.gz" *.cottheme README.md install-coteditor.sh LICENSE
+    print_success "CotEditor package created"
     cd - > /dev/null
 }
 
@@ -282,6 +301,7 @@ main() {
         build_vscode
         build_emacs
         build_vim
+        build_coteditor
         create_checksums
         show_summary
     else
