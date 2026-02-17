@@ -65,7 +65,7 @@ The iB-theme project has been successfully prepared for submission to GNU ELPA (
 ## Technical Specifications
 
 ### Package Requirements Met
-- ✅ Minimum Emacs version: 24.1
+- ✅ Minimum Emacs version: 28.1
 - ✅ No external dependencies
 - ✅ Self-contained themes
 - ✅ Proper autoload functionality

@@ -71,7 +71,7 @@ All files follow GNU ELPA requirements:
 - GPL v3+ license headers
 - FSF copyright assignment
 
-The package has been tested with Emacs 24.1+ and is ready for inclusion in GNU ELPA.
+The package has been tested with Emacs 28.1+ and is ready for inclusion in GNU ELPA.
 
 Please let me know if you need any additional information or modifications.
 

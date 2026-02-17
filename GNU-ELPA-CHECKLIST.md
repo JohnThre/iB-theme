@@ -17,7 +17,7 @@
 
 ### ✅ Package Metadata
 - [x] Version field uses dotted numeric format (1.0.0)
-- [x] Package-Requires field specifies minimum Emacs version (24.1)
+- [x] Package-Requires field specifies minimum Emacs version (28.1)
 - [x] Keywords field includes relevant terms
 - [x] URL field points to project repository
 - [x] Maintainer field specified

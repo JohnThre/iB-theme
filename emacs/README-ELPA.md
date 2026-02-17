@@ -31,7 +31,7 @@ This package has been prepared for GNU ELPA submission with the following requir
 - Appropriate `;;;###autoload` comments added
 
 ### Package Requirements
-- Minimum Emacs version: 24.1
+- Minimum Emacs version: 28.1
 - No external dependencies
 - Themes are self-contained
 

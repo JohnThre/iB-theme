@@ -30,14 +30,16 @@ iB-theme is a professional color scheme based on IBM's Carbon Design System, pro
 
 ### Method 1: VS Code Marketplace
 ```bash
-# Install from VS Code Marketplace
-code --install-extension ib-theme.ib-theme
+# Install from the Marketplace (VS Code)
+code --install-extension jpfchang.ib-theme
 ```
 
 ### Method 2: Open VSX Registry
 ```bash
-# Install from Open VSX Registry (for VS Code alternatives)
-code --install-extension ib-theme.ib-theme
+# Install from Open VSX (for VSCodium and other alternatives)
+codium --install-extension jpfchang.ib-theme
+# If using VS Code with the Open VSX extension bridge, you can also run:
+code --install-extension jpfchang.ib-theme
 ```
 
 ### Method 3: Manual Installation
@@ -205,8 +207,8 @@ npm install -g @vscode/vsce
 # Package the extension
 vsce package
 
-# Install locally
-code --install-extension ib-theme-1.0.0.vsix
+# Install locally (replace <version> with the version in package.json)
+code --install-extension dist/ib-theme-<version>.vsix
 ```
 
 ### Testing
@@ -259,7 +261,7 @@ GitHub: [@JohnThre](https://github.com/JohnThre)
 - Inspired by [IBM's Carbon Design System](https://carbondesignsystem.com/)
 - Colors based on [IBM Design Language](https://www.ibm.com/design/language/)
 - Built for modern development workflows
-- Made with love in the Swiss
+- Made with love in Switzerland
 
 ## Stats
 

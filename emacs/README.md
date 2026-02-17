@@ -198,7 +198,7 @@ You can customize the themes by creating your own theme that inherits from iB-th
 ### Colors Not Displaying Correctly
 
 1. Ensure your terminal supports 256 colors or true color
-2. Check your Emacs version (requires Emacs 24.1+)
+2. Check your Emacs version (requires Emacs 28.1+)
 3. Try `M-x list-colors-display` to verify color support
 
 ### Package-Specific Issues
