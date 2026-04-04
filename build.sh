@@ -108,7 +108,7 @@ validate_json() {
 create_build_structure() {
     print_info "Creating build structure..."
     
-    mkdir -p "$BUILD_DIR"/{vscode,emacs,vim,coteditor}
+    mkdir -p "$BUILD_DIR"/{vscode,emacs,vim,coteditor,terminal}
     mkdir -p "$DIST_DIR"
     
     print_success "Build structure created"
@@ -214,6 +214,24 @@ build_coteditor() {
     cd - > /dev/null
 }
 
+# Function to build Terminal.app package
+build_terminal() {
+    print_info "Building Terminal.app package..."
+
+    # Copy Terminal.app files
+    for f in terminal/*.terminal; do
+        [ -f "$f" ] && cp "$f" "$BUILD_DIR/terminal/"
+    done
+    cp terminal/install-terminal.sh "$BUILD_DIR/terminal/"
+    cp LICENSE "$BUILD_DIR/terminal/"
+
+    # Create Terminal.app package archive
+    cd "$BUILD_DIR/terminal"
+    tar -czf "../../$DIST_DIR/ib-theme-terminal-$VERSION.tar.gz" *.terminal install-terminal.sh LICENSE
+    print_success "Terminal.app package created"
+    cd - > /dev/null
+}
+
 # Function to create checksums
 create_checksums() {
     print_info "Creating checksums..."
@@ -312,6 +330,7 @@ main() {
         build_emacs
         build_vim
         build_coteditor
+        build_terminal
         create_checksums
         show_summary
     else

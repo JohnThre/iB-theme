@@ -267,6 +267,43 @@ if [ -f "package.json" ]; then
     fi
 fi
 
+# Test 10: Check Terminal.app theme files
+print_info "Testing Terminal.app themes..."
+
+if [ -f "terminal/ib-theme-dark.terminal" ]; then
+    print_test "PASS" "Terminal.app dark theme exists"
+else
+    print_test "FAIL" "Terminal.app dark theme missing"
+fi
+
+if [ -f "terminal/ib-theme-light.terminal" ]; then
+    print_test "PASS" "Terminal.app light theme exists"
+else
+    print_test "FAIL" "Terminal.app light theme missing"
+fi
+
+if command -v plutil &> /dev/null; then
+    if plutil -lint terminal/ib-theme-dark.terminal &> /dev/null; then
+        print_test "PASS" "Terminal.app dark theme plist is valid"
+    else
+        print_test "FAIL" "Terminal.app dark theme plist is invalid"
+    fi
+
+    if plutil -lint terminal/ib-theme-light.terminal &> /dev/null; then
+        print_test "PASS" "Terminal.app light theme plist is valid"
+    else
+        print_test "FAIL" "Terminal.app light theme plist is invalid"
+    fi
+else
+    print_warning "plutil not found (not macOS), skipping plist validation"
+fi
+
+if [ -x "terminal/install-terminal.sh" ]; then
+    print_test "PASS" "Terminal.app install script is executable"
+else
+    print_test "FAIL" "Terminal.app install script not executable"
+fi
+
 # Summary
 echo ""
 echo -e "${BLUE}📊 Test Summary${NC}"
