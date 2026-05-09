@@ -1,4 +1,4 @@
-name: Publish Marketplaces
+name: Publish Open VSX
 
 on:
   release:
@@ -43,19 +43,13 @@ jobs:
         run: |
           npm install -g @vscode/vsce ovsx
 
-      - name: Verify marketplace secrets
+      - name: Verify Open VSX secret
         run: |
-          if [ -z "$VSCE_PAT" ]; then
-            echo "VSCE_PAT repository secret is required to publish to Visual Studio Marketplace."
-            exit 1
-          fi
-
           if [ -z "$OVSX_PAT" ]; then
             echo "OVSX_PAT repository secret is required to publish to Open VSX."
             exit 1
           fi
         env:
-          VSCE_PAT: ${{ secrets.VSCE_PAT }}
           OVSX_PAT: ${{ secrets.OVSX_PAT }}
 
       - name: Build and validate release package
@@ -68,11 +62,6 @@ jobs:
           VSIX="dist/ib-theme-${VERSION}.vsix"
           test -f "$VSIX"
           echo "path=$VSIX" >> "$GITHUB_OUTPUT"
-
-      - name: Publish to VS Code Marketplace
-        run: npx @vscode/vsce publish --packagePath "${{ steps.vsix.outputs.path }}" --pat "$VSCE_PAT"
-        env:
-          VSCE_PAT: ${{ secrets.VSCE_PAT }}
 
       - name: Publish to Open VSX
         run: npx ovsx publish "${{ steps.vsix.outputs.path }}" -p "$OVSX_PAT"

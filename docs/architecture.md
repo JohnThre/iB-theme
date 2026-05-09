@@ -67,15 +67,14 @@ sequenceDiagram
     Script->>GH: create release with assets
 ```
 
-## Marketplace Publishing Flow
+## Open VSX Publishing Flow
 
-Publishing to the extension registries is handled by GitHub Actions after a release is published. The workflow rebuilds the VSIX and publishes the same package to Visual Studio Marketplace and Open VSX.
+Publishing to Open VSX is handled by GitHub Actions after a release is published. VS Code Marketplace publishing remains separate because that release channel is already handled outside this workflow.
 
 ```mermaid
 flowchart LR
-    release["GitHub release published"] --> action["Publish Marketplaces workflow"]
+    release["GitHub release published"] --> action["Publish Open VSX workflow"]
     action --> build["./build.sh --clean --test --package"]
     build --> vsix["dist/ib-theme-<version>.vsix"]
-    vsix --> marketplace["VS Code Marketplace\nnpx @vscode/vsce publish"]
     vsix --> openvsx["Open VSX\nnpx ovsx publish"]
 ```

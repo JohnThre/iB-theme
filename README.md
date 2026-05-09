@@ -290,7 +290,7 @@ jsonlint themes/ib-theme-light.json
 
 ### Signed Releases
 
-Releases are created with signed Git tags and detached GPG signatures for every uploaded artifact. The release helper uses the default local GPG secret key, so configure that key in Git and add its public key to GitHub before publishing. After a GitHub release is published, GitHub Actions publishes the VSIX to the Visual Studio Marketplace and Open VSX using the `VSCE_PAT` and `OVSX_PAT` repository secrets.
+Releases are created with signed Git tags and detached GPG signatures for every uploaded artifact. The release helper uses the default local GPG secret key, so configure that key in Git and add its public key to GitHub before publishing. After a GitHub release is published, GitHub Actions publishes the VSIX to Open VSX using the `OVSX_PAT` repository secret.
 
 ```bash
 # Confirm GitHub CLI authentication

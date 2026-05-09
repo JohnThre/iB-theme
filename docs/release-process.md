@@ -8,8 +8,7 @@ Use this process to publish iB-theme releases through GitHub's free release tool
 - `gpg` installed with a secret signing key.
 - Git configured with `user.signingkey` for the GitHub-registered release key, or a suitable default GPG secret key.
 - `jq`, `npm`, and VS Code packaging support available.
-- Repository secrets configured for marketplace publishing:
-  - `VSCE_PAT`: Visual Studio Marketplace Personal Access Token with Marketplace Manage scope.
+- Repository secret configured for marketplace publishing:
   - `OVSX_PAT`: Open VSX access token.
 - Clean working tree on the release commit.
 
@@ -29,7 +28,7 @@ gpg --list-secret-keys --keyid-format=long
 5. Commit the release changes.
 6. Run `scripts/release.sh`.
 7. Verify the GitHub release page shows the expected tag, assets, checksums, and `.asc` signatures.
-8. Verify the `Publish Marketplaces` GitHub Actions workflow publishes the VSIX to Visual Studio Marketplace and Open VSX.
+8. Verify the `Publish Open VSX` GitHub Actions workflow publishes the VSIX to Open VSX.
 
 ## Publishing
 
@@ -47,7 +46,7 @@ scripts/release.sh v1.3.0 "iB-theme v1.3.0"
 
 The helper creates a signed Git tag, verifies the tag locally, signs every `dist/` artifact with detached ASCII-armored GPG signatures, pushes the tag, and creates the GitHub release with `gh release create`.
 
-## Marketplace Publishing
+## Open VSX Publishing
 
 `.github/workflows/publish-marketplaces.yml` runs automatically when a GitHub release is published. It can also be run manually through `workflow_dispatch` with an optional tag input.
 
@@ -57,9 +56,8 @@ The workflow rebuilds and validates the release with:
 ./build.sh --clean --test --package
 ```
 
-It publishes the generated `dist/ib-theme-<version>.vsix` to both registries:
+It publishes the generated `dist/ib-theme-<version>.vsix` to Open VSX:
 
 ```bash
-npx @vscode/vsce publish --packagePath dist/ib-theme-<version>.vsix --pat "$VSCE_PAT"
 npx ovsx publish dist/ib-theme-<version>.vsix -p "$OVSX_PAT"
 ```

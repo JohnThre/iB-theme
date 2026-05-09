@@ -395,22 +395,16 @@ else
     print_test "FAIL" "Marketplace workflow does not support manual dispatch"
 fi
 
-if [ -f ".github/workflows/publish-marketplaces.yml" ] && grep -q "VSCE_PAT" .github/workflows/publish-marketplaces.yml; then
-    print_test "PASS" "Marketplace workflow uses VSCE_PAT"
-else
-    print_test "FAIL" "Marketplace workflow missing VSCE_PAT"
-fi
-
 if [ -f ".github/workflows/publish-marketplaces.yml" ] && grep -q "OVSX_PAT" .github/workflows/publish-marketplaces.yml; then
     print_test "PASS" "Marketplace workflow uses OVSX_PAT"
 else
     print_test "FAIL" "Marketplace workflow missing OVSX_PAT"
 fi
 
-if [ -f ".github/workflows/publish-marketplaces.yml" ] && grep -q "@vscode/vsce" .github/workflows/publish-marketplaces.yml; then
-    print_test "PASS" "Marketplace workflow publishes with vsce"
+if [ -f ".github/workflows/publish-marketplaces.yml" ] && ! grep -q "VSCE_PAT" .github/workflows/publish-marketplaces.yml; then
+    print_test "PASS" "Marketplace workflow does not require VSCE_PAT"
 else
-    print_test "FAIL" "Marketplace workflow missing vsce publish"
+    print_test "FAIL" "Marketplace workflow still requires VSCE_PAT"
 fi
 
 if [ -f ".github/workflows/publish-marketplaces.yml" ] && grep -q "ovsx publish" .github/workflows/publish-marketplaces.yml; then

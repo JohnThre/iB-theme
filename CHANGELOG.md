@@ -8,7 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.3.0] - 2026-05-09
 
 ### Added
-- GitHub Actions marketplace publishing for Visual Studio Marketplace (`vsce`) and Open VSX (`ovsx`) after GitHub releases are published.
+- GitHub Actions marketplace publishing for Open VSX (`ovsx`) after GitHub releases are published.
 - iTerm2 support with generated dark and light `.itermcolors` profiles.
 - iTerm2 import script for macOS (`terminal/install-iterm2.sh`).
 - iTerm2 validation, packaging, documentation, and GitHub Actions test coverage.
