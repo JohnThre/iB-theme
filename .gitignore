@@ -21,6 +21,30 @@ Thumbs.db
 *.swo
 *~
 
+# AI coding tool local files
+AGENTS.md
+CLAUDE.md
+CLAUDE.local.md
+GEMINI.md
+GEMINI.local.md
+.codex/
+.claude/
+.gemini/
+.continue/
+.aider*
+.copilot/
+.github/copilot-instructions.md
+.cursorrules
+.cursorignore
+.windsurf/
+.windsurfrules
+.codeium/
+.tabnine/
+.cline/
+.clinerules
+.roo/
+.roorules
+
 # Logs
 logs
 *.log
@@ -62,4 +86,4 @@ jspm_packages/
 # Build files
 build/
 dist/
-checksums.txt 
+checksums.txt
