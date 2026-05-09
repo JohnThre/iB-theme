@@ -43,6 +43,21 @@ jobs:
         run: |
           npm install -g @vscode/vsce ovsx
 
+      - name: Verify marketplace secrets
+        run: |
+          if [ -z "$VSCE_PAT" ]; then
+            echo "VSCE_PAT repository secret is required to publish to Visual Studio Marketplace."
+            exit 1
+          fi
+
+          if [ -z "$OVSX_PAT" ]; then
+            echo "OVSX_PAT repository secret is required to publish to Open VSX."
+            exit 1
+          fi
+        env:
+          VSCE_PAT: ${{ secrets.VSCE_PAT }}
+          OVSX_PAT: ${{ secrets.OVSX_PAT }}
+
       - name: Build and validate release package
         run: ./build.sh --clean --test --package
 
