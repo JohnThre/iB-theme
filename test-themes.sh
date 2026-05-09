@@ -374,6 +374,57 @@ else
     print_test "FAIL" "Release script does not create GitHub releases with gh"
 fi
 
+# Test 13: Check marketplace publishing workflow
+print_info "Testing marketplace publishing workflow..."
+
+if [ -f ".github/workflows/publish-marketplaces.yml" ]; then
+    print_test "PASS" "Marketplace publishing workflow exists"
+else
+    print_test "FAIL" "Marketplace publishing workflow missing"
+fi
+
+if [ -f ".github/workflows/publish-marketplaces.yml" ] && grep -q "release:" .github/workflows/publish-marketplaces.yml; then
+    print_test "PASS" "Marketplace workflow runs for GitHub releases"
+else
+    print_test "FAIL" "Marketplace workflow is not release-triggered"
+fi
+
+if [ -f ".github/workflows/publish-marketplaces.yml" ] && grep -q "workflow_dispatch:" .github/workflows/publish-marketplaces.yml; then
+    print_test "PASS" "Marketplace workflow supports manual dispatch"
+else
+    print_test "FAIL" "Marketplace workflow does not support manual dispatch"
+fi
+
+if [ -f ".github/workflows/publish-marketplaces.yml" ] && grep -q "VSCE_PAT" .github/workflows/publish-marketplaces.yml; then
+    print_test "PASS" "Marketplace workflow uses VSCE_PAT"
+else
+    print_test "FAIL" "Marketplace workflow missing VSCE_PAT"
+fi
+
+if [ -f ".github/workflows/publish-marketplaces.yml" ] && grep -q "OVSX_PAT" .github/workflows/publish-marketplaces.yml; then
+    print_test "PASS" "Marketplace workflow uses OVSX_PAT"
+else
+    print_test "FAIL" "Marketplace workflow missing OVSX_PAT"
+fi
+
+if [ -f ".github/workflows/publish-marketplaces.yml" ] && grep -q "@vscode/vsce" .github/workflows/publish-marketplaces.yml; then
+    print_test "PASS" "Marketplace workflow publishes with vsce"
+else
+    print_test "FAIL" "Marketplace workflow missing vsce publish"
+fi
+
+if [ -f ".github/workflows/publish-marketplaces.yml" ] && grep -q "ovsx publish" .github/workflows/publish-marketplaces.yml; then
+    print_test "PASS" "Marketplace workflow publishes with ovsx"
+else
+    print_test "FAIL" "Marketplace workflow missing ovsx publish"
+fi
+
+if [ -f ".github/workflows/publish-marketplaces.yml" ] && grep -q "./build.sh --clean --test --package" .github/workflows/publish-marketplaces.yml; then
+    print_test "PASS" "Marketplace workflow builds and tests before publishing"
+else
+    print_test "FAIL" "Marketplace workflow does not run full build validation"
+fi
+
 # Summary
 echo ""
 echo -e "${BLUE}📊 Test Summary${NC}"

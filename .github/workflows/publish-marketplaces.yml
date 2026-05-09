@@ -1,0 +1,65 @@
+name: Publish Marketplaces
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Release tag to publish, for example v1.3.0"
+        required: false
+
+permissions:
+  contents: read
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    if: ${{ github.event_name == 'workflow_dispatch' || !github.event.release.prerelease }}
+
+    steps:
+      - name: Resolve checkout ref
+        id: ref
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ -n "${{ github.event.inputs.tag }}" ]; then
+            echo "value=${{ github.event.inputs.tag }}" >> "$GITHUB_OUTPUT"
+          elif [ "${{ github.event_name }}" = "release" ]; then
+            echo "value=${{ github.event.release.tag_name }}" >> "$GITHUB_OUTPUT"
+          else
+            echo "value=${{ github.ref }}" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Checkout release source
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ steps.ref.outputs.value }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install publishing tools
+        run: |
+          npm install -g @vscode/vsce ovsx
+
+      - name: Build and validate release package
+        run: ./build.sh --clean --test --package
+
+      - name: Resolve VSIX path
+        id: vsix
+        run: |
+          VERSION=$(node -p "require('./package.json').version")
+          VSIX="dist/ib-theme-${VERSION}.vsix"
+          test -f "$VSIX"
+          echo "path=$VSIX" >> "$GITHUB_OUTPUT"
+
+      - name: Publish to VS Code Marketplace
+        run: npx @vscode/vsce publish --packagePath "${{ steps.vsix.outputs.path }}" --pat "$VSCE_PAT"
+        env:
+          VSCE_PAT: ${{ secrets.VSCE_PAT }}
+
+      - name: Publish to Open VSX
+        run: npx ovsx publish "${{ steps.vsix.outputs.path }}" -p "$OVSX_PAT"
+        env:
+          OVSX_PAT: ${{ secrets.OVSX_PAT }}
