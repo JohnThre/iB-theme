@@ -15,6 +15,8 @@ Brief description of the changes made.
 - [ ] Tested in GNU Emacs
 - [ ] Tested in VIM/Neovim
 - [ ] Tested in CotEditor (if applicable)
+- [ ] Tested in macOS Terminal (if applicable)
+- [ ] Tested in iTerm2 (if applicable)
 - [ ] Both light and dark themes tested
 - [ ] Color contrast verified for accessibility
 
@@ -33,4 +35,4 @@ Please add screenshots of the theme changes if relevant.
 
 ## Additional Notes
 
-Add any additional notes or context about the pull request here. 
+Add any additional notes or context about the pull request here.

@@ -214,21 +214,25 @@ build_coteditor() {
     cd - > /dev/null
 }
 
-# Function to build Terminal.app package
+# Function to build terminal app packages
 build_terminal() {
-    print_info "Building Terminal.app package..."
+    print_info "Building terminal packages..."
 
-    # Copy Terminal.app files
+    # Copy terminal files
     for f in terminal/*.terminal; do
         [ -f "$f" ] && cp "$f" "$BUILD_DIR/terminal/"
     done
+    for f in terminal/*.itermcolors; do
+        [ -f "$f" ] && cp "$f" "$BUILD_DIR/terminal/"
+    done
     cp terminal/install-terminal.sh "$BUILD_DIR/terminal/"
+    cp terminal/install-iterm2.sh "$BUILD_DIR/terminal/"
     cp LICENSE "$BUILD_DIR/terminal/"
 
-    # Create Terminal.app package archive
+    # Create terminal package archive
     cd "$BUILD_DIR/terminal"
-    tar -czf "../../$DIST_DIR/ib-theme-terminal-$VERSION.tar.gz" *.terminal install-terminal.sh LICENSE
-    print_success "Terminal.app package created"
+    tar -czf "../../$DIST_DIR/ib-theme-terminal-$VERSION.tar.gz" *.terminal *.itermcolors install-terminal.sh install-iterm2.sh LICENSE
+    print_success "Terminal package created"
     cd - > /dev/null
 }
 

@@ -19,13 +19,13 @@ This project follows the principles of open source collaboration. Please be resp
 1. Fork the repository
 2. Clone your fork locally
 3. Make your changes
-4. Test the theme in Cursor IDE, GNU Emacs, VIM, Neovim, and CotEditor
+4. Test the theme in Cursor IDE, GNU Emacs, VIM, Neovim, CotEditor, macOS Terminal, and iTerm2 when affected
 5. Submit a pull request
 
 ### Theme Development Guidelines
 
 - Follow IBM design principles and color schemes
-- Ensure compatibility with Cursor IDE, GNU Emacs, VIM, Neovim, and CotEditor
+- Ensure compatibility with Cursor IDE, GNU Emacs, VIM, Neovim, CotEditor, macOS Terminal, and iTerm2
 - Test both light and dark theme variants
 - Maintain consistency across all supported editors
 
@@ -56,4 +56,4 @@ By contributing to iB-theme, you agree that your contributions will be licensed 
 
 ## Questions?
 
-Feel free to open an issue for any questions about contributing. 
+Feel free to open an issue for any questions about contributing.

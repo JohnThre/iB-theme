@@ -1,8 +1,8 @@
 {
   "name": "ib-theme",
   "displayName": "iB-theme",
-  "description": "IBM style code editor theme for Cursor IDE, GNU Emacs, VIM, Neovim, and CotEditor",
-  "version": "1.2.0",
+  "description": "IBM style code editor and terminal theme for Cursor IDE, GNU Emacs, VIM, Neovim, CotEditor, macOS Terminal, and iTerm2",
+  "version": "1.3.0",
   "publisher": "jpfchang",
   "license": "GPL-3.0",
   "icon": "iB-theme.png",
@@ -21,7 +21,9 @@
     "emacs",
     "vim",
     "neovim",
-    "coteditor"
+    "coteditor",
+    "terminal",
+    "iterm2"
   ],
   "contributes": {
     "themes": [
@@ -49,4 +51,4 @@
     "name": "iB-theme",
     "email": "jnc@freew.org"
   }
-} 
+}

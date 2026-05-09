@@ -5,6 +5,15 @@ All notable changes to the iB-theme project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.3.0] - 2026-05-09
+
+### Added
+- iTerm2 support with generated dark and light `.itermcolors` profiles.
+- iTerm2 import script for macOS (`terminal/install-iterm2.sh`).
+- iTerm2 validation, packaging, documentation, and GitHub Actions test coverage.
+- Signed release helper that creates signed Git tags, detached GPG signatures for release artifacts, and GitHub releases via `gh`.
+- Maintainer documentation with GitHub-rendered architecture, terminal generation, validation, packaging, and release flow diagrams.
+
 ## [1.2.0] - 2025-08-29
 
 ### Added

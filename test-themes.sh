@@ -304,6 +304,76 @@ else
     print_test "FAIL" "Terminal.app install script not executable"
 fi
 
+# Test 11: Check iTerm2 theme files
+print_info "Testing iTerm2 themes..."
+
+if [ -f "terminal/ib-theme-dark.itermcolors" ]; then
+    print_test "PASS" "iTerm2 dark theme exists"
+else
+    print_test "FAIL" "iTerm2 dark theme missing"
+fi
+
+if [ -f "terminal/ib-theme-light.itermcolors" ]; then
+    print_test "PASS" "iTerm2 light theme exists"
+else
+    print_test "FAIL" "iTerm2 light theme missing"
+fi
+
+if command -v plutil &> /dev/null; then
+    if plutil -lint terminal/ib-theme-dark.itermcolors &> /dev/null; then
+        print_test "PASS" "iTerm2 dark theme plist is valid"
+    else
+        print_test "FAIL" "iTerm2 dark theme plist is invalid"
+    fi
+
+    if plutil -lint terminal/ib-theme-light.itermcolors &> /dev/null; then
+        print_test "PASS" "iTerm2 light theme plist is valid"
+    else
+        print_test "FAIL" "iTerm2 light theme plist is invalid"
+    fi
+else
+    print_warning "plutil not found (not macOS), skipping iTerm2 plist validation"
+fi
+
+if [ -x "terminal/install-iterm2.sh" ]; then
+    print_test "PASS" "iTerm2 install script is executable"
+else
+    print_test "FAIL" "iTerm2 install script not executable"
+fi
+
+# Test 12: Check release signing helper
+print_info "Testing release signing helper..."
+
+if [ -x "scripts/release.sh" ]; then
+    print_test "PASS" "Release script is executable"
+else
+    print_test "FAIL" "Release script missing or not executable"
+fi
+
+if [ -f "scripts/release.sh" ] && bash -n scripts/release.sh; then
+    print_test "PASS" "Release script syntax is valid"
+else
+    print_test "FAIL" "Release script syntax is invalid"
+fi
+
+if [ -f "scripts/release.sh" ] && grep -q "git tag -s" scripts/release.sh; then
+    print_test "PASS" "Release script creates signed tags"
+else
+    print_test "FAIL" "Release script does not create signed tags"
+fi
+
+if [ -f "scripts/release.sh" ] && grep -q "gpg .*--detach-sign" scripts/release.sh; then
+    print_test "PASS" "Release script creates detached GPG signatures"
+else
+    print_test "FAIL" "Release script does not create detached GPG signatures"
+fi
+
+if [ -f "scripts/release.sh" ] && grep -q "gh release create" scripts/release.sh; then
+    print_test "PASS" "Release script creates GitHub releases with gh"
+else
+    print_test "FAIL" "Release script does not create GitHub releases with gh"
+fi
+
 # Summary
 echo ""
 echo -e "${BLUE}📊 Test Summary${NC}"

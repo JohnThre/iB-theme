@@ -19,6 +19,9 @@ A clear and concise description of any alternative solutions or features you've 
 - [ ] Cursor IDE
 - [ ] GNU Emacs
 - [ ] VIM
+- [ ] CotEditor
+- [ ] macOS Terminal
+- [ ] iTerm2
 
 **Additional context**
-Add any other context or screenshots about the feature request here. 
+Add any other context or screenshots about the feature request here.

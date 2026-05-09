@@ -23,10 +23,10 @@ A clear and concise description of what you expected to happen.
 If applicable, add screenshots to help explain your problem.
 
 **Environment (please complete the following information):**
-- Editor: [e.g. Cursor IDE, GNU Emacs, VIM]
+- Editor: [e.g. Cursor IDE, GNU Emacs, VIM, macOS Terminal, iTerm2]
 - OS: [e.g. macOS, Linux, Windows]
 - Theme variant: [e.g. Dark, Light]
 - Version: [e.g. 1.0.0]
 
 **Additional context**
-Add any other context about the problem here. 
+Add any other context about the problem here.

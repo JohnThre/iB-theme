@@ -38,6 +38,9 @@ jobs:
         echo "Validating package.json..."
         jsonlint package.json || { echo "Error: package.json validation failed"; exit 1; }
         echo "package.json validation passed!"
+
+    - name: Run theme test suite
+      run: bash test-themes.sh
     
     - name: Package extension
       run: |
@@ -52,4 +55,4 @@ jobs:
         echo "Checking theme file sizes..."
         ls -la themes/ || { echo "Error: Cannot list theme files"; exit 1; }
         echo "Package size:"
-        ls -la *.vsix || { echo "Error: Cannot find packaged extension"; exit 1; } 
+        ls -la *.vsix || { echo "Error: Cannot find packaged extension"; exit 1; }

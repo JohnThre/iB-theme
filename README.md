@@ -5,12 +5,12 @@
 </p>
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
-[![Version](https://img.shields.io/badge/version-1.2.0-green.svg)](https://github.com/JohnThre/iB-theme/releases)
+[![Version](https://img.shields.io/badge/version-1.3.0-green.svg)](https://github.com/JohnThre/iB-theme/releases)
 [![Validate Theme](https://github.com/JohnThre/iB-theme/workflows/Validate%20Theme/badge.svg)](https://github.com/JohnThre/iB-theme/actions)
 
 ![iB-theme Preview (Cursor IDE / VS Code)](https://imgur.com/BpeOoAK.png)
 
-> IBM-inspired code editor theme for Cursor IDE, GNU Emacs, VIM, Neovim, and CotEditor.
+> IBM-inspired code editor and terminal theme for Cursor IDE, GNU Emacs, VIM, Neovim, CotEditor, macOS Terminal, and iTerm2.
 
 ## Overview
 
@@ -21,7 +21,7 @@ iB-theme is a professional color scheme based on IBM's Carbon Design System, pro
 - **IBM Carbon Design System** inspired color palette
 - **Dark and Light variants** for different preferences and lighting conditions
 - **Optimized for readability** with high contrast and carefully selected colors
-- **Multi-editor support** - Works with Cursor IDE, GNU Emacs, VIM, Neovim, and CotEditor
+- **Multi-editor and terminal support** - Works with Cursor IDE, GNU Emacs, VIM, Neovim, CotEditor, macOS Terminal, and iTerm2
 - **Professional appearance** suitable for enterprise development environments
 - **Accessibility focused** with WCAG compliant color contrasts
 - **Performance optimized** for smooth editing experience
@@ -185,6 +185,26 @@ Then in CotEditor, go to **Settings > Appearance** and select the theme.
 
 For more options, see [coteditor/README.md](coteditor/README.md).
 
+#### macOS Terminal and iTerm2
+
+**Terminal.app import**:
+```bash
+cd terminal
+chmod +x install-terminal.sh
+./install-terminal.sh
+```
+
+Or import manually from Terminal > **Settings** > **Profiles** > **Import** and select `terminal/ib-theme-dark.terminal` and/or `terminal/ib-theme-light.terminal`.
+
+**iTerm2 import**:
+```bash
+cd terminal
+chmod +x install-iterm2.sh
+./install-iterm2.sh
+```
+
+Or import manually from iTerm2 > **Settings** > **Profiles** > **Colors** > **Color Presets** > **Import** and select `terminal/ib-theme-dark.itermcolors` and/or `terminal/ib-theme-light.itermcolors`.
+
 ## Color Palette
 
 ### Dark Theme
@@ -232,6 +252,11 @@ Editor-specific installation and usage:
 - [VIM and Neovim](vim/README.md)
 - [GNU Emacs](emacs/README.md)
 - [CotEditor (macOS)](coteditor/README.md)
+- macOS Terminal and iTerm2 themes in [terminal/](terminal/)
+- Maintainer documentation in [docs/](docs/)
+  - [Architecture and diagrams](docs/architecture.md)
+  - [Terminal themes](docs/terminal-themes.md)
+  - [Release process](docs/release-process.md)
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for contribution guidelines.
 
@@ -263,6 +288,29 @@ jsonlint themes/ib-theme-dark.json
 jsonlint themes/ib-theme-light.json
 ```
 
+### Signed Releases
+
+Releases are created with signed Git tags and detached GPG signatures for every uploaded artifact. The release helper uses the default local GPG secret key, so configure that key in Git and add its public key to GitHub before publishing.
+
+```bash
+# Confirm GitHub CLI authentication
+gh auth status
+
+# Confirm a default GPG secret key is available
+gpg --list-secret-keys --keyid-format=long
+
+# Build, test, package, sign, push the tag, and create the GitHub release
+scripts/release.sh
+```
+
+The default tag is `v<package.json version>`. To override the tag or title:
+
+```bash
+scripts/release.sh v1.3.1 "iB-theme v1.3.1"
+```
+
+For the full checklist and release flow diagram, see [docs/release-process.md](docs/release-process.md).
+
 ## Contributing
 
 We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details.
@@ -286,6 +334,7 @@ We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.
 - [x] Enhanced error handling and installation scripts (v1.1.1) ✨ **NEW!**
 - [x] Neovim explicit install path and docs
 - [x] CotEditor support (macOS)
+- [x] macOS Terminal and iTerm2 support
 - [ ] GNU ELPA submission (pending FSF copyright assignment)
 - [ ] JetBrains IDEs support (v1.2.0)
 - [ ] Sublime Text support (v1.2.0)
